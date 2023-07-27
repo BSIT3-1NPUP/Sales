@@ -30,7 +30,7 @@ namespace Sales
         private void button6_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1 home = new Form1();
+            Home home = new Home();
             home.Show();
         }
 

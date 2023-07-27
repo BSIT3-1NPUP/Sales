@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Sales
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public Home()
         {
             InitializeComponent();
         }
@@ -47,7 +47,9 @@ namespace Sales
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Products products = new Products();
+            products.Show();
+            this.Hide();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
