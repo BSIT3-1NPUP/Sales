@@ -1,4 +1,5 @@
 ﻿using Orders_AppDev;
+using static Sales.Products;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,9 +44,52 @@ namespace Sales
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //ADD BUTTON
         {
+            if (addBtn.Text == "ADD")
+            {
+                int price;
+                int quantity;
 
+                // Attempt to parse the input values to integers
+                if (int.TryParse(price_txtbox.Text, out price) && int.TryParse(quantity_txtbox.Text, out quantity))
+                {
+                    // Both price and quantity were successfully parsed as integers
+                    productGetSet product = new productGetSet(name_txtbox.Text, type_txtbox.Text, price, quantity, description_txtbox.Text);
+                    DbProducts.addProducts(product);
+                    Clear();
+                }
+                else
+                {
+                    // Parsing failed for price_txtbox.Text or quantity_txtbox.Text
+                    // Show an error message or handle the case appropriately
+                    MessageBox.Show("Invalid price or quantity input. Please enter valid integer values.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (addBtn.Text == "Update")
+            {
+                int price;
+                int quantity;
+
+                // Attempt to parse the input values to integers
+                if (int.TryParse(price_txtbox.Text, out price) && int.TryParse(quantity_txtbox.Text, out quantity))
+                {
+                    // Both price and quantity were successfully parsed as integers
+                    productGetSet product = new productGetSet(name_txtbox.Text, type_txtbox.Text, price, quantity, description_txtbox.Text);
+                    DbProducts.updateProduct(product, SKU);
+                    Clear();
+                    this.Close();
+                }
+                else
+                {
+                    // Parsing failed for price_txtbox.Text or quantity_txtbox.Text
+                    // Show an error message or handle the case appropriately
+                    MessageBox.Show("Invalid price or quantity input. Please enter valid integer values.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
+            }
+            _parent.Display();
         }
 
         private void name_txtbox_TextChanged(object sender, EventArgs e)

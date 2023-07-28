@@ -43,7 +43,7 @@ namespace Sales
             if (e.ColumnIndex == 0)
             {
                 //edit
-                createProduct.SKU = products_dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                createProduct.SKU = products_dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 createProduct.product_name = products_dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 createProduct.product_type = products_dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 createProduct.price = products_dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();

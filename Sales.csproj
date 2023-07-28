@@ -119,6 +119,7 @@
     <Compile Include="Order\Orders.Designer.cs">
       <DependentUpon>Orders.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order\productGetSet.cs" />
     <Compile Include="Products\DbProducts.cs" />
     <Compile Include="Products\createProduct.cs">
       <SubType>Form</SubType>
