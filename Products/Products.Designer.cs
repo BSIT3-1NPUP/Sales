@@ -46,7 +46,6 @@
             this.productsBtn = new System.Windows.Forms.Button();
             this.pOrdersBtn = new System.Windows.Forms.Button();
             this.pHomeBtn = new System.Windows.Forms.Button();
-            this.testbtn2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.products_dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -234,23 +233,12 @@
             this.pHomeBtn.UseVisualStyleBackColor = true;
             this.pHomeBtn.Click += new System.EventHandler(this.pHomeBtn_Click);
             // 
-            // testbtn2
-            // 
-            this.testbtn2.Location = new System.Drawing.Point(713, 207);
-            this.testbtn2.Name = "testbtn2";
-            this.testbtn2.Size = new System.Drawing.Size(75, 23);
-            this.testbtn2.TabIndex = 27;
-            this.testbtn2.Text = "min";
-            this.testbtn2.UseVisualStyleBackColor = true;
-            this.testbtn2.Click += new System.EventHandler(this.testbtn2_Click);
-            // 
             // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.testbtn2);
             this.Controls.Add(this.testBtn);
             this.Controls.Add(this.products_dataGridView1);
             this.Controls.Add(this.pSalesBtn);
@@ -290,6 +278,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn productDescription;
         private System.Windows.Forms.DataGridViewButtonColumn editBtn;
         private System.Windows.Forms.DataGridViewButtonColumn deleteBtn;
-        private System.Windows.Forms.Button testbtn2;
     }
 }

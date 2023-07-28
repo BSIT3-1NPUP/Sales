@@ -52,5 +52,9 @@ namespace Sales
         {
 
         }
+        public void Clear()
+        {
+            name_txtbox.Text = type_txtbox.Text = price_txtbox.Text = quantity_txtbox.Text = description_txtbox.Text = string.Empty;
+        }
     }
 }
