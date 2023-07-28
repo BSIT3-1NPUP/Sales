@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using Orders_AppDev;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,8 @@ namespace Sales
         public Products()
         {
             InitializeComponent();
+            DbProducts.DisplayandSearch("SELECT * FROM tbproducts", products_dataGridView1);
+            Console.WriteLine("GG");
         }
 
         private void pSalesBtn_Click(object sender, EventArgs e)
@@ -31,7 +35,7 @@ namespace Sales
             home.Show();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void products_dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -43,7 +47,12 @@ namespace Sales
 
         private void testBtn_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add("001", "CD", "Merch", "1000", "5", "Plain CD");
+            //products_dataGridView1.Rows.Add("001", "CD", "Merch", "1000", "5", "Plain CD");
         }
+        //public void Display()
+        //{
+            
+        //}
+        
     }
 }

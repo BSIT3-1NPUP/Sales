@@ -106,6 +106,7 @@
             this.button9.TabIndex = 37;
             this.button9.Text = "Products";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
