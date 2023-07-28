@@ -86,6 +86,7 @@
             this.button7.TabIndex = 39;
             this.button7.Text = "Sales";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 

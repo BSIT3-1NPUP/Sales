@@ -124,6 +124,7 @@
             this.button9.TabIndex = 16;
             this.button9.Text = "Products";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -135,6 +136,7 @@
             this.button10.TabIndex = 15;
             this.button10.Text = "Orders";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // dataGridView1
             // 

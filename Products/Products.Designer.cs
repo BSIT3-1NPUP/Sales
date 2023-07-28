@@ -220,6 +220,7 @@
             this.pOrdersBtn.TabIndex = 21;
             this.pOrdersBtn.Text = "Orders";
             this.pOrdersBtn.UseVisualStyleBackColor = true;
+            this.pOrdersBtn.Click += new System.EventHandler(this.pOrdersBtn_Click);
             // 
             // pHomeBtn
             // 

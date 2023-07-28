@@ -106,5 +106,12 @@ namespace Orders_AppDev
             products.Show();
             this.Close();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Sales.Sales sales = new Sales.Sales();
+            sales.Show();
+            this.Close();
+        }
     }
 }

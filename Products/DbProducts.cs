@@ -57,11 +57,12 @@ namespace Sales
         }
         public static void DeleteProduct(string SKU)
         {
-            string sql = "DELETE FROM tborder WHERE order_id = @order_id";
+            string sql = "DELETE FROM tbproducts WHERE SKU = @SKU";
             MySqlConnection conn = GetConnection();
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add("@SKU", MySqlDbType.Int64).Value = SKU;
+
+            cmd.Parameters.Add("@SKU", MySqlDbType.VarChar).Value = SKU;
 
             try
             {

@@ -58,7 +58,7 @@ namespace Sales
                 //delete
                 if (MessageBox.Show("Are you sure you want to delete this order?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    DbOrders.DeleteOrder(products_dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    DbProducts.DeleteProduct(products_dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
                     Display();
                 }
                 return;
@@ -79,6 +79,13 @@ namespace Sales
         private void testbtn2_Click(object sender, EventArgs e)
         {
             //products_dataGridView1.Rows.Add("001", "CD", "Merch", "1000", "5", "Plain CD");
+        }
+
+        private void pOrdersBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Orders order = new Orders();
+            order.Show();
         }
     }
 }
