@@ -53,7 +53,7 @@ namespace Orders_AppDev
 
         private void Order_dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0)
+            if (e.ColumnIndex == 1)
             {
                 //edit
                 create_order.Clear();

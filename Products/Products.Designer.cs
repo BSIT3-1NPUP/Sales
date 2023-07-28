@@ -31,11 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.LOGOUT = new System.Windows.Forms.Button();
-            this.pHomeBtn = new System.Windows.Forms.Button();
-            this.pOrdersBtn = new System.Windows.Forms.Button();
-            this.productsBtn = new System.Windows.Forms.Button();
-            this.pUsersBtn = new System.Windows.Forms.Button();
-            this.pSalesBtn = new System.Windows.Forms.Button();
             this.products_dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +41,12 @@
             this.editBtn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.deleteBtn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.testBtn = new System.Windows.Forms.Button();
+            this.pSalesBtn = new System.Windows.Forms.Button();
+            this.pUsersBtn = new System.Windows.Forms.Button();
+            this.productsBtn = new System.Windows.Forms.Button();
+            this.pOrdersBtn = new System.Windows.Forms.Button();
+            this.pHomeBtn = new System.Windows.Forms.Button();
+            this.testbtn2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.products_dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,65 +80,6 @@
             this.LOGOUT.Text = "LOGOUT";
             this.LOGOUT.UseVisualStyleBackColor = true;
             // 
-            // pHomeBtn
-            // 
-            this.pHomeBtn.Image = global::Sales.Properties.Resources.home;
-            this.pHomeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pHomeBtn.Location = new System.Drawing.Point(22, 90);
-            this.pHomeBtn.Name = "pHomeBtn";
-            this.pHomeBtn.Size = new System.Drawing.Size(124, 50);
-            this.pHomeBtn.TabIndex = 20;
-            this.pHomeBtn.Text = "Home";
-            this.pHomeBtn.UseVisualStyleBackColor = true;
-            this.pHomeBtn.Click += new System.EventHandler(this.pHomeBtn_Click);
-            // 
-            // pOrdersBtn
-            // 
-            this.pOrdersBtn.Image = global::Sales.Properties.Resources.order__1_;
-            this.pOrdersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pOrdersBtn.Location = new System.Drawing.Point(181, 89);
-            this.pOrdersBtn.Name = "pOrdersBtn";
-            this.pOrdersBtn.Size = new System.Drawing.Size(124, 50);
-            this.pOrdersBtn.TabIndex = 21;
-            this.pOrdersBtn.Text = "Orders";
-            this.pOrdersBtn.UseVisualStyleBackColor = true;
-            // 
-            // productsBtn
-            // 
-            this.productsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.productsBtn.Image = global::Sales.Properties.Resources.box;
-            this.productsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.productsBtn.Location = new System.Drawing.Point(343, 90);
-            this.productsBtn.Name = "productsBtn";
-            this.productsBtn.Size = new System.Drawing.Size(124, 50);
-            this.productsBtn.TabIndex = 22;
-            this.productsBtn.Text = "Products";
-            this.productsBtn.UseVisualStyleBackColor = false;
-            // 
-            // pUsersBtn
-            // 
-            this.pUsersBtn.Image = global::Sales.Properties.Resources.profile;
-            this.pUsersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pUsersBtn.Location = new System.Drawing.Point(499, 90);
-            this.pUsersBtn.Name = "pUsersBtn";
-            this.pUsersBtn.Size = new System.Drawing.Size(124, 50);
-            this.pUsersBtn.TabIndex = 23;
-            this.pUsersBtn.Text = "Users";
-            this.pUsersBtn.UseVisualStyleBackColor = true;
-            // 
-            // pSalesBtn
-            // 
-            this.pSalesBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pSalesBtn.Image = global::Sales.Properties.Resources.sales;
-            this.pSalesBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pSalesBtn.Location = new System.Drawing.Point(652, 90);
-            this.pSalesBtn.Name = "pSalesBtn";
-            this.pSalesBtn.Size = new System.Drawing.Size(124, 50);
-            this.pSalesBtn.TabIndex = 24;
-            this.pSalesBtn.Text = "Sales";
-            this.pSalesBtn.UseVisualStyleBackColor = false;
-            this.pSalesBtn.Click += new System.EventHandler(this.pSalesBtn_Click);
-            // 
             // products_dataGridView1
             // 
             this.products_dataGridView1.AllowUserToAddRows = false;
@@ -154,7 +96,8 @@
             this.deleteBtn});
             this.products_dataGridView1.Location = new System.Drawing.Point(22, 157);
             this.products_dataGridView1.Name = "products_dataGridView1";
-            this.products_dataGridView1.Size = new System.Drawing.Size(754, 281);
+            this.products_dataGridView1.ReadOnly = true;
+            this.products_dataGridView1.Size = new System.Drawing.Size(673, 281);
             this.products_dataGridView1.TabIndex = 25;
             this.products_dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -163,42 +106,52 @@
             this.SKU.DataPropertyName = "SKU";
             this.SKU.HeaderText = "SKU";
             this.SKU.Name = "SKU";
+            this.SKU.ReadOnly = true;
             this.SKU.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.SKU.Width = 50;
             // 
             // productName
             // 
             this.productName.DataPropertyName = "product_name";
             this.productName.HeaderText = "Name";
             this.productName.Name = "productName";
+            this.productName.ReadOnly = true;
             // 
             // productType
             // 
             this.productType.DataPropertyName = "product_type";
             this.productType.HeaderText = "Type";
             this.productType.Name = "productType";
+            this.productType.ReadOnly = true;
             // 
             // productPrice
             // 
             this.productPrice.DataPropertyName = "price";
             this.productPrice.HeaderText = "Price";
             this.productPrice.Name = "productPrice";
+            this.productPrice.ReadOnly = true;
+            this.productPrice.Width = 50;
             // 
             // productQuantity
             // 
             this.productQuantity.DataPropertyName = "product_quantity";
             this.productQuantity.HeaderText = "Quantity";
             this.productQuantity.Name = "productQuantity";
+            this.productQuantity.ReadOnly = true;
+            this.productQuantity.Width = 50;
             // 
             // productDescription
             // 
             this.productDescription.DataPropertyName = "description";
             this.productDescription.HeaderText = "Description";
             this.productDescription.Name = "productDescription";
+            this.productDescription.ReadOnly = true;
             // 
             // editBtn
             // 
             this.editBtn.HeaderText = "Edit";
             this.editBtn.Name = "editBtn";
+            this.editBtn.ReadOnly = true;
             this.editBtn.Text = "EDIT";
             this.editBtn.ToolTipText = "Edit";
             this.editBtn.UseColumnTextForButtonValue = true;
@@ -207,13 +160,14 @@
             // 
             this.deleteBtn.HeaderText = "Delete";
             this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.ReadOnly = true;
             this.deleteBtn.Text = "Delete";
             this.deleteBtn.ToolTipText = "Delete";
             this.deleteBtn.UseColumnTextForButtonValue = true;
             // 
             // testBtn
             // 
-            this.testBtn.Location = new System.Drawing.Point(22, 13);
+            this.testBtn.Location = new System.Drawing.Point(713, 157);
             this.testBtn.Name = "testBtn";
             this.testBtn.Size = new System.Drawing.Size(75, 23);
             this.testBtn.TabIndex = 26;
@@ -221,12 +175,82 @@
             this.testBtn.UseVisualStyleBackColor = true;
             this.testBtn.Click += new System.EventHandler(this.testBtn_Click);
             // 
+            // pSalesBtn
+            // 
+            this.pSalesBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pSalesBtn.Image = global::Sales.Properties.Resources.sales;
+            this.pSalesBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pSalesBtn.Location = new System.Drawing.Point(652, 90);
+            this.pSalesBtn.Name = "pSalesBtn";
+            this.pSalesBtn.Size = new System.Drawing.Size(124, 50);
+            this.pSalesBtn.TabIndex = 24;
+            this.pSalesBtn.Text = "Sales";
+            this.pSalesBtn.UseVisualStyleBackColor = false;
+            this.pSalesBtn.Click += new System.EventHandler(this.pSalesBtn_Click);
+            // 
+            // pUsersBtn
+            // 
+            this.pUsersBtn.Image = global::Sales.Properties.Resources.profile;
+            this.pUsersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pUsersBtn.Location = new System.Drawing.Point(499, 90);
+            this.pUsersBtn.Name = "pUsersBtn";
+            this.pUsersBtn.Size = new System.Drawing.Size(124, 50);
+            this.pUsersBtn.TabIndex = 23;
+            this.pUsersBtn.Text = "Users";
+            this.pUsersBtn.UseVisualStyleBackColor = true;
+            // 
+            // productsBtn
+            // 
+            this.productsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.productsBtn.Image = global::Sales.Properties.Resources.box;
+            this.productsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.productsBtn.Location = new System.Drawing.Point(343, 90);
+            this.productsBtn.Name = "productsBtn";
+            this.productsBtn.Size = new System.Drawing.Size(124, 50);
+            this.productsBtn.TabIndex = 22;
+            this.productsBtn.Text = "Products";
+            this.productsBtn.UseVisualStyleBackColor = false;
+            // 
+            // pOrdersBtn
+            // 
+            this.pOrdersBtn.Image = global::Sales.Properties.Resources.order__1_;
+            this.pOrdersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pOrdersBtn.Location = new System.Drawing.Point(181, 89);
+            this.pOrdersBtn.Name = "pOrdersBtn";
+            this.pOrdersBtn.Size = new System.Drawing.Size(124, 50);
+            this.pOrdersBtn.TabIndex = 21;
+            this.pOrdersBtn.Text = "Orders";
+            this.pOrdersBtn.UseVisualStyleBackColor = true;
+            // 
+            // pHomeBtn
+            // 
+            this.pHomeBtn.Image = global::Sales.Properties.Resources.home;
+            this.pHomeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pHomeBtn.Location = new System.Drawing.Point(22, 90);
+            this.pHomeBtn.Name = "pHomeBtn";
+            this.pHomeBtn.Size = new System.Drawing.Size(124, 50);
+            this.pHomeBtn.TabIndex = 20;
+            this.pHomeBtn.Text = "Home";
+            this.pHomeBtn.UseVisualStyleBackColor = true;
+            this.pHomeBtn.Click += new System.EventHandler(this.pHomeBtn_Click);
+            // 
+            // testbtn2
+            // 
+            this.testbtn2.Location = new System.Drawing.Point(713, 207);
+            this.testbtn2.Name = "testbtn2";
+            this.testbtn2.Size = new System.Drawing.Size(75, 23);
+            this.testbtn2.TabIndex = 27;
+            this.testbtn2.Text = "min";
+            this.testbtn2.UseVisualStyleBackColor = true;
+            this.testbtn2.Click += new System.EventHandler(this.testbtn2_Click);
+            // 
             // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.testbtn2);
             this.Controls.Add(this.testBtn);
             this.Controls.Add(this.products_dataGridView1);
             this.Controls.Add(this.pSalesBtn);
@@ -266,5 +290,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn productDescription;
         private System.Windows.Forms.DataGridViewButtonColumn editBtn;
         private System.Windows.Forms.DataGridViewButtonColumn deleteBtn;
+        private System.Windows.Forms.Button testbtn2;
     }
 }

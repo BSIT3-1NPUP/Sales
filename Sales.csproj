@@ -120,6 +120,12 @@
       <DependentUpon>Orders.cs</DependentUpon>
     </Compile>
     <Compile Include="Products\DbProducts.cs" />
+    <Compile Include="Products\createProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\createProduct.Designer.cs">
+      <DependentUpon>createProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Products\Products.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Order\Orders.resx">
       <DependentUpon>Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\createProduct.resx">
+      <DependentUpon>createProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Products\Products.resx">
       <DependentUpon>Products.cs</DependentUpon>

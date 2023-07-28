@@ -14,11 +14,12 @@ namespace Sales
 {
     public partial class Products : Form
     {
+        createProduct createProduct;
         public Products()
         {
             InitializeComponent();
             DbProducts.DisplayandSearch("SELECT * FROM tbproducts", products_dataGridView1);
-            Console.WriteLine("GG");
+            createProduct = new createProduct(this);
         }
 
         private void pSalesBtn_Click(object sender, EventArgs e)
@@ -35,24 +36,47 @@ namespace Sales
             home.Show();
         }
 
-        private void products_dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.ColumnIndex == 0)
+            {
+                //edit
+                createProduct.SKU = products_dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                createProduct.product_name = products_dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                createProduct.product_type = products_dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                createProduct.price = products_dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                createProduct.quantity = products_dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                createProduct.description = products_dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                createProduct.UpdateInfo();
+                createProduct.ShowDialog();
+            }
 
+            if (e.ColumnIndex == 1)
+            {
+                //delete
+                if (MessageBox.Show("Are you sure you want to delete this order?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    DbOrders.DeleteOrder(products_dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    Display();
+                }
+                return;
+            }
         }
 
         private void testBtn_Click(object sender, EventArgs e)
         {
+            createProduct.ShowDialog();
+        }
+        public void Display()
+        {
+            DbProducts.DisplayandSearch("SELECT * FROM tbproducts", products_dataGridView1);
+        }
+
+        private void testbtn2_Click(object sender, EventArgs e)
+        {
             //products_dataGridView1.Rows.Add("001", "CD", "Merch", "1000", "5", "Plain CD");
         }
-        //public void Display()
-        //{
-            
-        //}
-        
     }
 }
