@@ -1,4 +1,5 @@
 ﻿using System;
+using Orders_AppDev;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,7 +31,7 @@ namespace Sales
         private void button6_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1 home = new Form1();
+            Home home = new Home();
             home.Show();
         }
 
@@ -47,6 +48,20 @@ namespace Sales
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Products products = new Products();
+            products.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Orders order = new Orders();
+            order.Show();
         }
     }
 }

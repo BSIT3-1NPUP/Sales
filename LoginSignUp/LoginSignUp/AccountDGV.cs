@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sales
+namespace LoginSignUp
 {
-    public partial class Form2 : Form
+    public partial class UserDataForm : Form
     {
-        public Form2()
+        public UserDataForm()
         {
             InitializeComponent();
+        }
+
+        private void EditDGV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AccountDGV_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
