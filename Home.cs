@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Orders_AppDev;
 
 namespace Sales
 {
@@ -55,7 +56,9 @@ namespace Sales
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            Orders orders = new Orders();
+            orders.Show();
+            this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
